@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#btnVerileriCek").click(function () {
+                $.ajax({
+                    type: "Get",
+                    url: "https://localhost:8091/api/sehir",
+                    success: function (response) {
+                        console.log(response);
+                    }
+                });
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <a id="btnVerileriCek">Verileri Çek</a>
+</body>
+</html>
