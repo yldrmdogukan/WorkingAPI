@@ -12,6 +12,7 @@ using WorkingAPI.Attributes;
 
 namespace WorkingAPI.Controllers
 {
+    //[ApiExcepitonAttribute] //Uygulama seviyesine taşımak için.
     public class ProductsController : ApiController
     {
         ProductDal productDal = new ProductDal();
@@ -24,7 +25,6 @@ namespace WorkingAPI.Controllers
 
         [ResponseType(typeof(IEnumerable<Products>))] //Dökümantasyon için
         [HttpGet] //Method ismi özelleştirmeye imkan sağlıyor.
-        [ApiExcepitonAttribute]
         public IHttpActionResult Get()
         {
             dynamic a = 0;
