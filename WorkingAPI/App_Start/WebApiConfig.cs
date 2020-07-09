@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using WorkingAPI.Attributes;
 
 namespace WorkingAPI
 {
@@ -13,6 +14,8 @@ namespace WorkingAPI
             config.EnableCors();
             // Web API routes
             config.MapHttpAttributeRoutes();
+
+            config.Filters.Add(new ApiExcepitonAttribute());
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
